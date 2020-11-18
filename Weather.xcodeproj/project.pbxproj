@@ -3,19 +3,24 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0EAFC62565191400759B27 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CE0EAFC52565191400759B27 /* SwiftyJSON */; };
 		CEFEF7172564F71A00D5A2B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFEF7162564F71A00D5A2B9 /* AppDelegate.swift */; };
 		CEFEF7192564F71A00D5A2B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFEF7182564F71A00D5A2B9 /* SceneDelegate.swift */; };
 		CEFEF71B2564F71A00D5A2B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFEF71A2564F71A00D5A2B9 /* ViewController.swift */; };
 		CEFEF71E2564F71A00D5A2B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFEF71C2564F71A00D5A2B9 /* Main.storyboard */; };
 		CEFEF7202564F71C00D5A2B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEFEF71F2564F71C00D5A2B9 /* Assets.xcassets */; };
 		CEFEF7232564F71C00D5A2B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEFEF7212564F71C00D5A2B9 /* LaunchScreen.storyboard */; };
+		E4DD610E8EB4F38E8F503008 /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AAEE1F138CC0C66AF8236CF /* Pods_Weather.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		438FCF4E911227AB4189DFEE /* Pods-Weather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.debug.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.debug.xcconfig"; sourceTree = "<group>"; };
+		6AAEE1F138CC0C66AF8236CF /* Pods_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B034AA3FDB2BBDBFB01BAA30 /* Pods-Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.release.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.release.xcconfig"; sourceTree = "<group>"; };
 		CEFEF7132564F71A00D5A2B9 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEFEF7162564F71A00D5A2B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEFEF7182564F71A00D5A2B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +36,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0EAFC62565191400759B27 /* SwiftyJSON in Frameworks */,
+				E4DD610E8EB4F38E8F503008 /* Pods_Weather.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14D831F2A31ACD17A2747422 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AAEE1F138CC0C66AF8236CF /* Pods_Weather.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1C6E2D45905684CC98142DA3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				438FCF4E911227AB4189DFEE /* Pods-Weather.debug.xcconfig */,
+				B034AA3FDB2BBDBFB01BAA30 /* Pods-Weather.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CEFEF70A2564F71A00D5A2B9 = {
 			isa = PBXGroup;
 			children = (
 				CEFEF7152564F71A00D5A2B9 /* Weather */,
 				CEFEF7142564F71A00D5A2B9 /* Products */,
+				1C6E2D45905684CC98142DA3 /* Pods */,
+				14D831F2A31ACD17A2747422 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,15 +100,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEFEF7272564F71C00D5A2B9 /* Build configuration list for PBXNativeTarget "Weather" */;
 			buildPhases = (
+				7C44C58D730CEF87BD975A50 /* [CP] Check Pods Manifest.lock */,
 				CEFEF70F2564F71A00D5A2B9 /* Sources */,
 				CEFEF7102564F71A00D5A2B9 /* Frameworks */,
 				CEFEF7112564F71A00D5A2B9 /* Resources */,
+				72984BE98B01869E83F5CEAA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Weather;
+			packageProductDependencies = (
+				CE0EAFC52565191400759B27 /* SwiftyJSON */,
+			);
 			productName = Weather;
 			productReference = CEFEF7132564F71A00D5A2B9 /* Weather.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +141,9 @@
 				Base,
 			);
 			mainGroup = CEFEF70A2564F71A00D5A2B9;
+			packageReferences = (
+				CE0EAFC42565191400759B27 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = CEFEF7142564F71A00D5A2B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -131,6 +165,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72984BE98B01869E83F5CEAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Weather/Pods-Weather-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Weather/Pods-Weather-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Weather/Pods-Weather-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C44C58D730CEF87BD975A50 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Weather-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CEFEF70F2564F71A00D5A2B9 /* Sources */ = {
@@ -283,6 +359,7 @@
 		};
 		CEFEF7282564F71C00D5A2B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 438FCF4E911227AB4189DFEE /* Pods-Weather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +378,7 @@
 		};
 		CEFEF7292564F71C00D5A2B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B034AA3FDB2BBDBFB01BAA30 /* Pods-Weather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -339,6 +417,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE0EAFC42565191400759B27 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE0EAFC52565191400759B27 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0EAFC42565191400759B27 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEFEF70B2564F71A00D5A2B9 /* Project object */;
 }
